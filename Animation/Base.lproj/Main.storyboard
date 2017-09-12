@@ -1,24 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zMY-H3-eqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="aq3-nK-0i9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQP-YO-9ut">
+                                <rect key="frame" x="157" y="636" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.64465237403100772" green="0.64465237403100772" blue="0.64465237403100772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="aCS-qV-PhF"/>
+                                    <constraint firstAttribute="height" constant="100" id="pxg-ZO-1LP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X56-D3-Ika" userLabel="internalBall">
+                                <rect key="frame" x="192" y="706" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.64465237399999997" green="0.64465237399999997" blue="0.64465237399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4sY-AO-WPr"/>
+                                    <constraint firstAttribute="width" constant="30" id="STW-Vw-yFj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="aq3-nK-0i9" firstAttribute="top" secondItem="DQP-YO-9ut" secondAttribute="bottom" id="M4H-6v-y8R"/>
+                            <constraint firstItem="X56-D3-Ika" firstAttribute="bottom" secondItem="aq3-nK-0i9" secondAttribute="top" id="d52-mf-guB"/>
+                            <constraint firstItem="X56-D3-Ika" firstAttribute="centerX" secondItem="DQP-YO-9ut" secondAttribute="centerX" id="edA-gc-wsv"/>
+                            <constraint firstItem="DQP-YO-9ut" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iiE-DR-ivW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Ball" destination="DQP-YO-9ut" id="Dc4-bL-hLw"/>
+                        <outlet property="MainView" destination="8bC-Xf-vdC" id="LMw-Hk-tuA"/>
+                        <outlet property="internalBall" destination="X56-D3-Ika" id="Ldw-Z9-ZK8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-826.39999999999998" y="-222.63868065967017"/>
         </scene>
     </scenes>
 </document>
